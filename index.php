@@ -13,8 +13,8 @@ try {
     // create shape: ShapeType::STAR or ShapeType::TREE
     $shape = ShapeFactory::create(ShapeType::STAR);
 
-    // create printer: Browser or Cli
-    $printer = new Browser();
+    // select printer
+    $printer = (php_sapi_name() === "cli") ? new Cli() : new Browser();
 
     // run
     $printer->print($shape->generate(5));
