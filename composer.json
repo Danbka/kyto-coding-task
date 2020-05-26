@@ -1,0 +1,19 @@
+{
+    "name": "danbka/kyto-coding-task",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.1"
+    },
+    "authors": [
+        {
+            "name": "Daniil Gorokh",
+            "email": "daniil.gorokh@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Danbka\\Kyto\\": "src"
+        }
+    }
+}
