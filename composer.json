@@ -15,5 +15,10 @@
         "psr-4": {
             "Danbka\\Kyto\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Danbka\\Kyto\\Tests\\": "tests"
+        }
     }
 }
