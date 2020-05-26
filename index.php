@@ -16,8 +16,11 @@ try {
     // select printer
     $printer = (php_sapi_name() === "cli") ? new Cli() : new Browser();
 
-    // run
-    $printer->print($shape->generate(5));
+    // client can get random size or set particular
+    $sizes = [5, 7, 11];
+    $size = $sizes[array_rand($sizes)];
+
+    $printer->print($shape->generate($size));
 } catch (Throwable $exception) {
     print $exception->getMessage();
 }
