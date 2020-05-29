@@ -22,6 +22,7 @@ class Tree implements ShapeInterface
 
         $result = [];
 
+        // first row
         $result[] = array_merge(
             array_fill(0, $size - 2, " "),
             ["+"]
