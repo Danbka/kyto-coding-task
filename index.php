@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Danbka\Kyto\Enum\ShapeSize;
 use Danbka\Kyto\Enum\ShapeType;
 use Danbka\Kyto\Factory\ShapeFactory;
 use Danbka\Kyto\Service\Printer\Browser;
@@ -17,7 +18,12 @@ try {
     $printer = (php_sapi_name() === "cli") ? new Cli() : new Browser();
 
     // client can get random size or set particular
-    $sizes = [5, 7, 11];
+    $sizes = [
+        ShapeSize::SMALL,
+        ShapeSize::MEDIUM,
+        ShapeSize::LARGE,
+    ];
+
     $size = $sizes[array_rand($sizes)];
 
     $printer->print($shape->generate($size));
