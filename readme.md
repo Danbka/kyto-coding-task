@@ -8,7 +8,9 @@ Clone repository and install dependencies via composer
 
 ### Usage
 
-Example of usage you can find in ``index.php`` file.
+From command line: ``php index.php``
+
+In browser: run build-in web server ``php -S localhost:8000`` and open localhost:8000
 
 ### Assumptions
 
